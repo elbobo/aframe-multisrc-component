@@ -60,5 +60,5 @@ As with the standard `src` component you can use `multisrc` with images that hav
 
 Property | Description | Default
 --- | --- | ---
-srcs | comma separated list of img srcs can be inline links or ids for assets | []
-srcspath | for use with inline images, saves you having to write the full image path each time | ''
+srcs | comma separated list of assets can be inline links or ids pointing to assets tag | []
+srcspath | for use with inline assets, saves you having to write the full image path each time | ''
