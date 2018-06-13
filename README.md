@@ -1,9 +1,12 @@
 # A-frame multisrc component
-An A-frame component that allows you to add multiple material sources to standard a-frame shapes
+
+An [A-frame](https://aframe.io) component that allows you to add multiple material sources to standard a-frame shapes
 
 ![Multisrc component animated demo](https://raw.githubusercontent.com/elbobo/aframe-multisrc-component/master/multisrc_animateddemo.gif)
 
 # Basics
+
+As with the standard `src` component you can use `multisrc` with images that have been preloaded in the `assets` tag (recommended for all the reasons described [here](https://aframe.io/docs/0.8.0/core/asset-management-system.html#sidebar)...
 
 ```
   <head>
@@ -28,6 +31,27 @@ An A-frame component that allows you to add multiple material sources to standar
     </a-scene>
   </body>
   ```
+  ..or you can add the images inline
+  
+  ```
+  <a-box 
+    position="0 1.5 -2" 
+    multisrc="srcs:path/to/rightimage.png,path/to/leftimage.png,path/to/topimage.png,path/to/bottomimage.png,path/to/frontimage.png,path/to/backimage.png"
+    shadow>
+  </a-box>
+  ```
+  When defining assets inline you can avoid rewriting lengthy paths (if all your assets are in the same folder) by using the `srcspath` attribute and then simply listing the images name like so;
+  
+  ```
+  <a-box 
+    position="0 1.5 -2" 
+    multisrc="srcspath:path/to/;srcs:rightimage.png,leftimage.png,topimage.png,bottomimage.png,frontimage.png,backimage.png"
+    shadow>
+  </a-box>
+  ```
+  Example here are shown with images but as with the standard `src` tag we can also use videos as a texture
+  
+  
 
 Property | Description | Default
 --- | --- | ---
