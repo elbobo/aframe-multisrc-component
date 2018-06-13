@@ -5,6 +5,7 @@ An A-frame component that allows you to add multiple material sources to standar
 
 # Basics
 
+```
   <head>
     <title>Aframe multisrc component demo</title>
     <meta name="description" content="Aframe multisrc component demo">
@@ -46,6 +47,7 @@ An A-frame component that allows you to add multiple material sources to standar
       </a-box>
     </a-scene>
   </body>
+  ```
 
 Property | Description | Default
 --- | --- | ---
