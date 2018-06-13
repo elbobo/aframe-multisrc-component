@@ -53,7 +53,7 @@ As with the standard `src` component you can use `multisrc` with images that hav
   
   ---
   
-  NB The order of your assets assumes the following order - **positive-x**, **negative-x**, **positive-y**, **negative-y**, **positive-z**, **negative-z** 
+  NB The `srcs` attribute assumes the following order - **positive-x**, **negative-x**, **positive-y**, **negative-y**, **positive-z**, **negative-z** so in the case of a cube, it will place your first asset on the positive-x side (right), the second on the negative-x side (left) and so on. See diagram below.
   
   
 # API
