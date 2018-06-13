@@ -7,38 +7,18 @@ An A-frame component that allows you to add multiple material sources to standar
 
 ```
   <head>
-    <title>Aframe multisrc component demo</title>
-    <meta name="description" content="Aframe multisrc component demo">
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
     <script src="js/multisrc.js"></script>
   </head>
   <body>
     <a-scene>
       <a-assets>
-        <img 
-          id="right"
-          src="path/to/rightimage.png"
-          crossorigin="anonymous">
-        <img 
-          id="left"
-          src="path/to/leftimage.png"
-          crossorigin="anonymous">
-        <img 
-          id="top"
-          src="path/to/topimage.png"
-          crossorigin="anonymous">
-        <img 
-          id="bottom"
-          src="path/to/bottomimage.png"
-          crossorigin="anonymous">
-        <img 
-          id="front"
-          src="path/to/frontimage.png"
-          crossorigin="anonymous">
-        <img 
-          id="back"
-          src="path/to/backimage.png"
-          crossorigin="anonymous">
+        <img id="right" src="path/to/rightimage.png">
+        <img id="left" src="path/to/leftimage.png">
+        <img id="top" src="path/to/topimage.png">
+        <img id="bottom" src="path/to/bottomimage.png">
+        <img id="front" src="path/to/frontimage.png">
+        <img id="back" src="path/to/backimage.png">
       </a-assets>
       <a-box 
         position="0 1.5 -2" 
