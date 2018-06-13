@@ -50,11 +50,7 @@ As with the standard `src` component you can use `multisrc` with images that hav
   </a-box>
   ```
   Example here are shown with images but as with the standard `src` tag we can also use videos as a texture.
-  
-  ---
-  
-  NB The `srcs` attribute assumes the following order - **positive-x**, **negative-x**, **positive-y**, **negative-y**, **positive-z**, **negative-z** so in the case of a cube, it will place your first asset on the positive-x side (right), the second on the negative-x side (left) and so on. See diagram below.
-  
+    
   
 # API
 
@@ -62,3 +58,7 @@ Property | Description | Default
 --- | --- | ---
 srcs | comma separated list of assets can be inline links or ids pointing to assets tag | []
 srcspath | for use with inline assets, saves you having to write the full image path each time | ''
+
+  ---
+  
+  NB The `srcs` attribute assumes the following order - **positive-x**, **negative-x**, **positive-y**, **negative-y**, **positive-z**, **negative-z** so in the case of a cube, it will place your first asset on the positive-x side (right), the second on the negative-x side (left) and so on. See diagram below.
