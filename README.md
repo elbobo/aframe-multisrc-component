@@ -49,9 +49,14 @@ As with the standard `src` component you can use `multisrc` with images that hav
     shadow>
   </a-box>
   ```
-  Example here are shown with images but as with the standard `src` tag we can also use videos as a texture
+  Example here are shown with images but as with the standard `src` tag we can also use videos as a texture.
+  
+  ---
+  
+  NB The order of your assets assumes the following order - **positive-x**, **negative-x**, **positive-y**, **negative-y**, **positive-z**, **negative-z** 
   
   
+# API
 
 Property | Description | Default
 --- | --- | ---
