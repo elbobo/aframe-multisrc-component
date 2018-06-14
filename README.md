@@ -13,7 +13,7 @@ As with the standard `src` component you can use `multisrc` with images/videos t
 ```
   <head>
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
-    <script src="js/multisrc.js"></script>
+    <script src="https://cdn.rawgit.com/elbobo/aframe-multisrc-component/45e654c4/dist/aframe-multisrc-component.js">
   </head>
   <body>
     <a-scene>
@@ -107,6 +107,36 @@ etc. Which would result in the following on an otherwise blue cube with 0 metaln
 ![Multisrc granular changes demo image](https://github.com/elbobo/aframe-multisrc-component/blob/master/targeting.gif?raw=true)
 
 NB if you change the 'master' material's properties at any point with `setAttribute` or similar, these granular changes will be overwritten.
+
+# Usage
+
+Install and use directly with the link in the below example
+
+```
+  <head>
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/elbobo/aframe-multisrc-component/45e654c4/dist/aframe-multisrc-component.js">
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="right" src="path/to/rightimage.png">
+        <img id="left" src="path/to/leftimage.png">
+        <img id="top" src="path/to/topimage.png">
+        <img id="bottom" src="path/to/bottomimage.png">
+        <img id="front" src="path/to/frontimage.png">
+        <img id="back" src="path/to/backimage.png">
+      </a-assets>
+      <a-box 
+        position="0 1.5 -2" 
+        multisrc="srcs:#right,#left,#top,#bottom,#front,#back"
+        color="blue"
+        opacity="0.5"
+        shadow>
+      </a-box>
+    </a-scene>
+  </body>
+  ```
 
 # Known issues
 
