@@ -92,9 +92,10 @@ Or get the right and make it a wireframe
  foo.granularChange(1).wireframe = true
 ```
 
-etc. Which would result in the following on an otherwise blue cube.
+etc. Which would result in the following on an otherwise blue cube with 0 metalness.
 
-Put gif
+![Multisrc granular changes demo image](https://github.com/elbobo/aframe-multisrc-component/blob/master/targeting.gif?raw=true)
+
 
 # Known issues
 
