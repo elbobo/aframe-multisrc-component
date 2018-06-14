@@ -69,7 +69,28 @@ Put image
 
 # Advanced
 
+Under the hood `multisrc` is adding a different material to each 'side' of a shape. Aside from the `src` attribute, these materials inherit properties from the default material component added to the entity. I think the most common use case of this is to apply different textures so I have made this straightforward to use. You can however target the individual materials and effect other properties. I have included a function that allows you to make granular changes should you wish to.
+
+Materials are in an array in the standard order for applying materials and so can be reached by their index i.e. 0 = positive-x, 1 = negative-x, 2 = positive-y etc.
+
+So, assuming you have `multisrc` attached to an element with id 'foo' you could use the `granularChange` function to target the right hand side material on a cube and change its colour like so;
+
+```
+var foo = document.getElementById('foo').components.multisrc
+foo.granularChange(0).color = {r:0,g:1,b:0}
+```
+
+Or get the top one and change its opacity
+
+```
+foo.granularChange(2).opacity = 0.5
+```
+
+etc.
+
+
+
 # Known issues
 
-In terms of figuring out how many sides a shape has (and applying textures accordingly) this currently works as well as a standard `src` would i.e. it gets it right on cubes, cylinders, cones, triangles, circles etc. but not on more complex shapes like dodecahedron etc. I'm not going to list them all here but assume if you get unexpected results with a texture using standard `src` it will do the same with `multisrc' maybe this could be fixed at some point
+In terms of figuring out how many sides a shape has (and applying textures accordingly) this currently works as well as a standard `src` would i.e. it gets it right on cubes, cylinders, cones, triangles, circles etc. but not on more complex shapes like dodecahedron etc. I'm not going to list them all here but assume if you get unexpected results with a texture using standard `src` it will do the same with `multisrc` maybe this could be fixed at some point
 
