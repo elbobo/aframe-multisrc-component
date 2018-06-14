@@ -4,6 +4,8 @@ An [A-frame](https://aframe.io) component that allows you to add separate image/
 
 ![Multisrc component animated demo](https://raw.githubusercontent.com/elbobo/aframe-multisrc-component/master/multisrc_animateddemo.gif)
 
+The multisrc component integrates with all existing components allowing you to define a different texture for each side of an image while still controlling all other material properties with the standard `material` attributes (color, opacity etc.). It should work seamlessly with all other aframe components too (physics, animation etc. Please let me know of any issues).
+
 # Basics
 
 As with the standard `src` component you can use `multisrc` with images/videos that have been preloaded in the `assets` tag (recommended for all the reasons described [here](https://aframe.io/docs/0.8.0/core/asset-management-system.html#sidebar))
@@ -26,6 +28,8 @@ As with the standard `src` component you can use `multisrc` with images/videos t
       <a-box 
         position="0 1.5 -2" 
         multisrc="srcs:#right,#left,#top,#bottom,#front,#back"
+        color="blue"
+        opacity="0.5"
         shadow>
       </a-box>
     </a-scene>
@@ -37,6 +41,8 @@ As with the standard `src` component you can use `multisrc` with images/videos t
   <a-box 
     position="0 1.5 -2" 
     multisrc="srcs:path/to/rightimage.png,path/to/leftimage.png,path/to/topimage.png,path/to/bottomimage.png,path/to/frontimage.png,path/to/backimage.png"
+    color="blue"
+    opacity="0.5"
     shadow>
   </a-box>
   ```
@@ -46,6 +52,8 @@ As with the standard `src` component you can use `multisrc` with images/videos t
   <a-box 
     position="0 1.5 -2" 
     multisrc="srcspath:path/to/;srcs:rightimage.png,leftimage.png,topimage.png,bottomimage.png,frontimage.png,backimage.png"
+    color="blue"
+    opacity="0.5"
     shadow>
   </a-box>
   ```
