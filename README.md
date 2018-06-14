@@ -75,15 +75,21 @@ Materials are in an array in the standard order for applying materials and so ca
 
 So, assuming you have `multisrc` attached to an element with id 'foo' you could use the `granularChange` function to target the right hand side material on a cube and change its colour like so;
 
-```
+```javascript
 var foo = document.getElementById('foo').components.multisrc
 foo.granularChange(0).color = {r:0,g:1,b:0}
 ```
 
-Or get the top one and change its opacity
+Or get the top and change its opacity
 
-```
+```javascript
 foo.granularChange(2).opacity = 0.5
+```
+
+Or get the front one and make it a wireframe
+
+```javascript
+foo.granularChange(4).wireframe = true
 ```
 
 etc.
