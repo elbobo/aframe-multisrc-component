@@ -67,7 +67,7 @@ Property | Description | Default
 srcs | comma separated list of assets. Can either be a selector to an `<img>` or `<video>` defined in assets, or an inline URL. | []
 srcspath | for use with inline assets, saves you having to write the full image path each time (see above for example) | ''
 
-  ---
+
   
 # Notes
 
@@ -77,7 +77,9 @@ Put image
 
 # Advanced
 
-Under the hood `multisrc` is adding a different material to each 'side' of a shape. Aside from the `src` attribute, these materials inherit properties from the default material component added to the entity. I think the most common use case of this is to apply different textures so I have made this straightforward to use. You can however target the individual materials and effect other properties. I have included a function that allows you to make granular changes should you wish to.
+Under the hood `multisrc` is adding a different material to each 'side' of a shape. This is made from an array of materials that three.js now allows to be added to the mesh [Please see here](https://stackoverflow.com/a/50645451/1729877) for SO answer and discussion that prompted this approach.
+
+Aside from the `src` attribute, these materials inherit properties from the default material component added to the entity. I think the most common use case of this is to apply different textures so I have made this straightforward to use. You can however target the individual materials and effect other properties. I have included a function that allows you to make granular changes should you wish to.
 
 Materials are in an array in the standard order for applying materials and so can be reached by their index i.e. 0 = positive-x, 1 = negative-x, 2 = positive-y etc.
 
