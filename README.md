@@ -6,7 +6,7 @@ An [A-frame](https://aframe.io) component that allows you to add multiple image/
 
 # Basics
 
-As with the standard `src` component you can use `multisrc` with images that have been preloaded in the `assets` tag (recommended for all the reasons described [here](https://aframe.io/docs/0.8.0/core/asset-management-system.html#sidebar)...
+As with the standard `src` component you can use `multisrc` with images that have been preloaded in the `assets` tag (recommended for all the reasons described [here](https://aframe.io/docs/0.8.0/core/asset-management-system.html#sidebar))
 
 ```
   <head>
@@ -49,14 +49,14 @@ As with the standard `src` component you can use `multisrc` with images that hav
     shadow>
   </a-box>
   ```
-  Example here are shown with images but as with the standard `src` tag we can also use videos as a texture.
+  Example here are shown with images but as with the standard `src` tag we can also use videos as a texture. The logic for playback on video textures (and how it differs between those defined inline or within assets) on `multisrc` is the same as that for video textures on standard `src` - see [here](https://aframe.io/docs/0.8.0/components/material.html#video-textures) for details. Basically, preloading is always the best way to do it.
     
   
 # API
 
 Property | Description | Default
 --- | --- | ---
-srcs | comma separated list of assets can be inline links or ids pointing to assets tag | []
+srcs | comma separated list of assets. Can either be a selector to an <img> or <video> defined in assets, or an inline URL. | []
 srcspath | for use with inline assets, saves you having to write the full image path each time | ''
 
   ---
