@@ -79,9 +79,9 @@ Put image
 
 Under the hood `multisrc` is adding a different material to each 'side' of a shape. This is made from an array of materials that three.js now allows to be added to the mesh [Please see here](https://stackoverflow.com/a/50645451/1729877) for SO answer and discussion that prompted this approach.
 
-Aside from the `src` attribute, these materials inherit properties from the default material component added to the entity. I think the most common use case of this is to apply different textures so I have made this straightforward to use. You can however target the individual materials and effect other properties. I have included a function that allows you to make granular changes should you wish to.
+Aside from the `src` attribute, these materials inherit properties from the default material component added to the entity so as to make its usage familiar. I think the most common use case of this is to apply different textures so I have affecting this declarative so its straightforward to use. You can however target the individual materials and effect other properties programatically. I have included a function that allows you to make granular changes should you wish to.
 
-Materials are in an array in the standard order for applying materials and so can be reached by their index i.e. 0 = positive-x, 1 = negative-x, 2 = positive-y etc.
+Materials are kept in an array in the standard order for applying materials, so individual materials can be reached by their index i.e. 0 = positive-x, 1 = negative-x, 2 = positive-y etc.
 
 So, assuming you have `multisrc` attached to an element with id 'foo' you could use the `granularChange` function to target the right hand side material on a cube and change its colour like so;
 
@@ -106,6 +106,7 @@ etc. Which would result in the following on an otherwise blue cube with 0 metaln
 
 ![Multisrc granular changes demo image](https://github.com/elbobo/aframe-multisrc-component/blob/master/targeting.gif?raw=true)
 
+NB if you change the 'master' material's properties at any point with `setAttribute` or similar, these granular changes will be overwritten.
 
 # Known issues
 
