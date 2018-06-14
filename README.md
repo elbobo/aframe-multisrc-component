@@ -6,7 +6,7 @@ An [A-frame](https://aframe.io) component that allows you to add multiple image/
 
 # Basics
 
-As with the standard `src` component you can use `multisrc` with images that have been preloaded in the `assets` tag (recommended for all the reasons described [here](https://aframe.io/docs/0.8.0/core/asset-management-system.html#sidebar))
+As with the standard `src` component you can use `multisrc` with images/videos that have been preloaded in the `assets` tag (recommended for all the reasons described [here](https://aframe.io/docs/0.8.0/core/asset-management-system.html#sidebar))
 
 ```
   <head>
@@ -31,7 +31,7 @@ As with the standard `src` component you can use `multisrc` with images that hav
     </a-scene>
   </body>
   ```
-  ..or you can add the images inline
+  Or you can add the images/videos inline
   
   ```
   <a-box 
@@ -40,7 +40,7 @@ As with the standard `src` component you can use `multisrc` with images that hav
     shadow>
   </a-box>
   ```
-  When defining assets inline you can avoid rewriting lengthy paths (if all your assets are in the same folder) by using the `srcspath` attribute and then simply listing the images name like so;
+  When defining assets inline you can avoid rewriting lengthy paths (if all your assets are in the same folder) by using the `srcspath` attribute and then simply listing the image/video names like so;
   
   ```
   <a-box 
@@ -49,7 +49,7 @@ As with the standard `src` component you can use `multisrc` with images that hav
     shadow>
   </a-box>
   ```
-  Example here are shown with images but as with the standard `src` tag we can also use videos as a texture. The logic for playback on video textures (and how it differs between those defined inline or within assets) on `multisrc` is the same as that for video textures on standard `src` - see [here](https://aframe.io/docs/0.8.0/components/material.html#video-textures) for details. Basically, preloading is always the best way to do it.
+  Examples here are shown using images but as with the standard `src` tag we can also use videos as a texture. The logic for playback on video textures (and how it differs between those defined inline or within assets) on `multisrc` is the same as that for video textures on standard `src` - see [here](https://aframe.io/docs/0.8.0/components/material.html#video-textures) for details. Basically, preloading is always the best way to do it.
     
   
 # API
@@ -61,4 +61,15 @@ srcspath | for use with inline assets, saves you having to write the full image 
 
   ---
   
-  NB The `srcs` attribute assumes the following order - **positive-x**, **negative-x**, **positive-y**, **negative-y**, **positive-z**, **negative-z** so in the case of a cube, it will place your first asset on the positive-x side (right), the second on the negative-x side (left) and so on. See diagram below.
+# Notes
+
+The `srcs` attribute assumes the following order - **positive-x**, **negative-x**, **positive-y**, **negative-y**, **positive-z**, **negative-z** so in the case of a cube, it will place your first asset on the positive-x side (right), the second on the negative-x side (left) and so on. See diagram below.
+
+Put image
+
+# Advanced
+
+# Known issues
+
+In terms of figuring out how many sides a shape has (and applying textures accordingly) this currently works as well as a standard `src` would i.e. it gets it right on cubes, cylinders, cones, triangles, circles etc. but not on more complex shapes like dodecahedron etc. I'm not going to list them all here but assume if you get unexpected results with a texture using standard `src` it will do the same with `multisrc' maybe this could be fixed at some point
+
