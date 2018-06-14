@@ -80,21 +80,21 @@ var foo = document.getElementById('foo').components.multisrc
 foo.granularChange(0).color = {r:0,g:1,b:0}
 ```
 
-Or get the top and change its opacity
+Or get the back and change its metalness
 
 ```javascript
-foo.granularChange(2).opacity = 0.5
+foo.granularChange(5).metalness = 0.8
 ```
 
-Or get the front one and make it a wireframe
+Or get the right and make it a wireframe
 
 ```javascript
-foo.granularChange(4).wireframe = true
+ foo.granularChange(1).wireframe = true
 ```
 
-etc.
+etc. Which would result in the following on an otherwise blue cube.
 
-
+Put gif
 
 # Known issues
 
