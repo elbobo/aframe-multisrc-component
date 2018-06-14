@@ -57,7 +57,7 @@ As with the standard `src` component you can use `multisrc` with images that hav
 Property | Description | Default
 --- | --- | ---
 srcs | comma separated list of assets. Can either be a selector to an `<img>` or `<video>` defined in assets, or an inline URL. | []
-srcspath | for use with inline assets, saves you having to write the full image path each time | ''
+srcspath | for use with inline assets, saves you having to write the full image path each time (see above for example) | ''
 
   ---
   
