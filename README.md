@@ -71,9 +71,9 @@ srcspath | for use with inline assets, saves you having to write the full image 
   
 # Notes
 
-The `srcs` attribute assumes the following order - **positive-x**, **negative-x**, **positive-y**, **negative-y**, **positive-z**, **negative-z** so in the case of a cube, it will place your first asset on the positive-x side (right), the second on the negative-x side (left) and so on. See diagram below.
+The `srcs` attribute assumes the following order - **positive-x**, **negative-x**, **positive-y**, **negative-y**, **positive-z**, **negative-z** so in the case of a cube, it will place your first asset on the positive-x side (right), the second on the negative-x side (left) and so on. See diagram below which hopefully makes this clearer.
 
-Put image
+![Multisrc order of images eplainer](https://github.com/elbobo/aframe-multisrc-component/blob/master/diagram.png?raw=true)
 
 # Advanced
 
