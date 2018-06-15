@@ -4,11 +4,11 @@ An [A-frame](https://aframe.io) component that allows you to add separate image/
 
 ![Multisrc component animated demo](https://raw.githubusercontent.com/elbobo/aframe-multisrc-component/master/multisrc_animateddemo.gif)
 
-The multisrc component integrates with all existing components allowing you to define a different texture for each side of an image while still controlling all other material properties with the standard `material` attributes (color, opacity etc.). It should work seamlessly with all other aframe components too (physics, animation etc. Please let me know of any issues).
+The multisrc component integrates with all existing components allowing you to define a different texture for each side of an shape while still controlling all other material properties with the standard `material` attributes (color, opacity etc.). It should work seamlessly with all other aframe components too (physics, animation etc. Please let me know of any issues).
 
 # Basics
 
-As with the standard `src` component you can use `multisrc` with images/videos that have been preloaded in the `assets` tag (recommended for all the reasons described [here](https://aframe.io/docs/0.8.0/core/asset-management-system.html#sidebar))
+As with the standard `src` attribute you can use `multisrc` with images/videos that have been preloaded in the `assets` tag (recommended for all the reasons described [here](https://aframe.io/docs/0.8.0/core/asset-management-system.html#sidebar))
 
 ```
   <head>
@@ -46,7 +46,7 @@ As with the standard `src` component you can use `multisrc` with images/videos t
     shadow>
   </a-box>
   ```
-  When defining assets inline you can avoid rewriting lengthy paths (if all your assets are in the same folder) by using the `srcspath` attribute and then simply listing the image/video names like so;
+When defining assets inline you can avoid rewriting lengthy paths (if all your assets are in the same folder) by using the `srcspath` attribute and then simply listing the image/video names like so;
   
   ```
   <a-box 
@@ -57,7 +57,7 @@ As with the standard `src` component you can use `multisrc` with images/videos t
     shadow>
   </a-box>
   ```
-  Examples here are shown using images but as with the standard `src` tag we can also use videos as a texture. The logic for playback on video textures (and how it differs between those defined inline or within assets) on `multisrc` is the same as that for video textures on standard `src` - see [here](https://aframe.io/docs/0.8.0/components/material.html#video-textures) for details. Basically, preloading is always the best way to do it.
+Examples here are shown using images but as with the standard `src` attribute we can also use videos as a texture. The logic for playback on video textures (and how it differs between those defined inline or within assets) on `multisrc` is the same as that for video textures on standard `src` - see [here](https://aframe.io/docs/0.8.0/components/material.html#video-textures) for details. Basically, preloading is always the best way to do it.
     
   
 # API
@@ -71,7 +71,7 @@ srcspath | for use with inline assets, saves you having to write the full image 
   
 # Notes
 
-The `srcs` attribute assumes the following order - **positive-x**, **negative-x**, **positive-y**, **negative-y**, **positive-z**, **negative-z** so in the case of a cube, it will place your first asset on the positive-x side (right), the second on the negative-x side (left) and so on. See diagram below which hopefully makes this clearer.
+The `srcs` attribute assumes the following order of your textures - **positive-x**, **negative-x**, **positive-y**, **negative-y**, **positive-z**, **negative-z** so in the case of a cube, it will place your first asset on the positive-x side (right), the second on the negative-x side (left) and so on. See diagram below which hopefully makes this clearer.
 
 ![Multisrc order of images eplainer](https://github.com/elbobo/aframe-multisrc-component/blob/master/diagram.png?raw=true)
 
@@ -109,7 +109,7 @@ Install and use directly with the link in the below example
 
 Under the hood `multisrc` is adding a different material to each 'side' of a shape. This is made from an array of materials that three.js now allows to be added to the mesh [Please see here](https://stackoverflow.com/a/50645451/1729877) for SO answer and discussion that prompted this approach.
 
-Aside from the `src` attribute, these materials inherit properties from the default material component added to the entity so as to make its usage familiar. I think the most common use case of this is to apply different textures so I have affecting this declarative so its straightforward to use. You can however target the individual materials and effect other properties programatically. I have included a function that allows you to make granular changes should you wish to.
+Aside from the `src` attribute, these materials inherit properties from the default material component added to the entity so as to make its usage familiar. I think the most common use case of this is to apply different textures so I have made manipulating this declarative so it is straightforward to use for the most common case. You can however target the individual materials and effect other properties programatically. I have included a function that allows you to make granular changes should you wish to.
 
 Materials are kept in an array in the standard order for applying materials, so individual materials can be reached by their index i.e. 0 = positive-x, 1 = negative-x, 2 = positive-y etc.
 
@@ -136,9 +136,9 @@ etc. Which would result in the following on an otherwise blue cube with 0 metaln
 
 ![Multisrc granular changes demo image](https://github.com/elbobo/aframe-multisrc-component/blob/master/targeting.gif?raw=true)
 
-NB if you change the 'master' material's properties at any point with `setAttribute` or similar, these granular changes will be overwritten.
+NB if you change the default material's properties at any point with `setAttribute` or similar, these granular changes will be overwritten.
 
 # Known issues
 
-In terms of figuring out how many sides a shape has (and applying textures accordingly) this currently works as well as a standard `src` would i.e. it gets it right on cubes, cylinders, cones, triangles, circles etc. but not on more complex shapes like dodecahedron etc. I'm not going to list them all here but assume if you get unexpected results with a texture using standard `src` it will do the same with `multisrc` maybe this could be fixed at some point
+In terms of figuring out how many sides a shape has (and applying textures accordingly) this currently works as well as the standard `src` attribute would i.e. it gets it right on cubes, cylinders, cones, triangles, circles etc. but not on more complex shapes like dodecahedron etc. I'm not going to list them all here but assume if you get unexpected results with a texture using standard `src` it will do the same with `multisrc` maybe I could handle this better at some point.
 
