@@ -10,10 +10,10 @@ The multisrc component integrates with all existing components allowing you to d
 
 As with the standard `src` attribute you can use `multisrc` with images/videos that have been preloaded in the `assets` tag (recommended for all the reasons described [here](https://aframe.io/docs/0.8.0/core/asset-management-system.html#sidebar))
 
-```
+```html
   <head>
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
-    <script src="https://cdn.rawgit.com/elbobo/aframe-multisrc-component/45e654c4/dist/aframe-multisrc-component.js">
+    <script src="https://cdn.rawgit.com/elbobo/aframe-multisrc-component/45e654c4/dist/aframe-multisrc-component.js"></script>
   </head>
   <body>
     <a-scene>
@@ -37,7 +37,7 @@ As with the standard `src` attribute you can use `multisrc` with images/videos t
   ```
   Or you can add the images/videos inline
   
-  ```
+  ```html
   <a-box 
     position="0 1.5 -2" 
     multisrc="srcs:path/to/rightimage.png,path/to/leftimage.png,path/to/topimage.png,path/to/bottomimage.png,path/to/frontimage.png,path/to/backimage.png"
@@ -48,7 +48,7 @@ As with the standard `src` attribute you can use `multisrc` with images/videos t
   ```
 When defining assets inline you can avoid rewriting lengthy paths (if all your assets are in the same folder) by using the `srcspath` attribute and then simply listing the image/video names like so;
   
-  ```
+  ```html
   <a-box 
     position="0 1.5 -2" 
     multisrc="srcspath:path/to/;srcs:rightimage.png,leftimage.png,topimage.png,bottomimage.png,frontimage.png,backimage.png"
@@ -79,10 +79,10 @@ The `srcs` attribute assumes the following order of your textures - **positive-x
 
 Install and use directly with the link in the below example
 
-```
+```html
   <head>
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
-    <script src="https://cdn.rawgit.com/elbobo/aframe-multisrc-component/45e654c4/dist/aframe-multisrc-component.js">
+    <script src="https://cdn.rawgit.com/elbobo/aframe-multisrc-component/45e654c4/dist/aframe-multisrc-component.js"></script>
   </head>
   <body>
     <a-scene>
