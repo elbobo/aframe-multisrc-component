@@ -27,6 +27,10 @@ As with the standard `src` attribute you can use `multisrc` with images/videos t
         <img id="back" src="path/to/backimage.png">
       </a-assets>
       
+      <!-- METHOD 1 -->
+      
+      <!-- If you know you want to assign assets to ALL sides, using the `srcs` attribute is probably easiest -->
+      
       <!-- you can assign the images as ids from assets -->
 
       <a-box 
@@ -39,23 +43,49 @@ As with the standard `src` attribute you can use `multisrc` with images/videos t
       
       <!-- OR add the images/videos inline -->
       
-       <a-box 
-    position="0 1.5 -2" 
-    multisrc="srcs:path/to/rightimage.png,path/to/leftimage.png,path/to/topimage.png,path/to/bottomimage.png,path/to/frontimage.png,path/to/backimage.png"
-    color="blue"
-    opacity="0.5"
-    shadow>
-  </a-box>
+      <a-box 
+        position="0 1.5 -2" multisrc="srcs:path/to/rightimage.png,path/to/leftimage.png,path/to/topimage.png,path/to/bottomimage.png,path/to/frontimage.png,path/to/backimage.png"
+        color="blue"
+        opacity="0.5"
+        shadow>
+      </a-box>
       
-  <!-- OR When defining assets inline you can avoid rewriting lengthy paths (if all your assets are in the same folder) by using the `srcspath` attribute and then simply listing the image/video names like so -->
+  <!-- OR When defining assets inline you can avoid rewriting lengthy paths (if all your assets are in the same folder) using `srcspath` 
+  <!-- Use the `srcspath` attribute and then simply list the image/video names like so -->
       
-   <a-box 
-    position="0 1.5 -2" 
-    multisrc="srcspath:path/to/;srcs:rightimage.png,leftimage.png,topimage.png,bottomimage.png,frontimage.png,backimage.png"
-    color="blue"
-    opacity="0.5"
-    shadow>
-  </a-box>
+      <a-box 
+       position="0 1.5 -2" 
+       multisrc="srcspath:path/to/;srcs:rightimage.png,leftimage.png,topimage.png,bottomimage.png,frontimage.png,backimage.png"
+       color="blue"
+       opacity="0.5"
+       shadow>
+      </a-box>
+   
+   <!-- METHOD 2 -->   
+      
+   <!-- If you want to assign assets to only particular sides, the 'srcx' attribute can be more targeted -->
+      
+   <!-- The following example will only add textures to the left and right hand sides -->
+      
+      <a-box 
+       position="0 1.5 -2" 
+       multisrc="src0:#right;src1:#left"
+       color="blue"
+       opacity="0.5"
+       shadow>
+      </a-box>
+      
+    <!-- or this would add textures to the top and front -->
+      
+      <a-box 
+       position="0 1.5 -2" 
+       multisrc="src2:#top;src4:#front"
+       color="blue"
+       opacity="0.5"
+       shadow>
+      </a-box>
+      
+    <!-- etc. and you can assign images inline and with srcspath using this method as well -->
            
     </a-scene>
   </body>
@@ -80,9 +110,11 @@ src5 |  Name of asset. Can either be a selector to an `<img>` or `<video>` defin
   
 # Notes
 
-The `srcs` attribute assumes the following order of your textures - **positive-x**, **negative-x**, **positive-y**, **negative-y**, **positive-z**, **negative-z** so in the case of a cube, it will place your first asset on the positive-x side (right), the second on the negative-x side (left) and so on. See diagram below which hopefully makes this clearer.
+The `srcs` attribute assumes the following order of your textures - **positive-x**, **negative-x**, **positive-y**, **negative-y**, **positive-z**, **negative-z** so in the case of a cube, it will place your first asset on the positive-x side (right), the second on the negative-x side (left) and so on. 
 
-![Multisrc order of images eplainer](https://github.com/elbobo/aframe-multisrc-component/blob/master/cubediagramv2.png?raw=true)
+The `src0`, `src1`, etc. attributes follow the same order. See diagram below which hopefully makes this clearer.
+
+![Multisrc order of images explainer](https://github.com/elbobo/aframe-multisrc-component/blob/master/cubediagramv2.png?raw=true)
 
 # Usage
 
