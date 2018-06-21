@@ -104,11 +104,11 @@ Property | Description | Default
 srcs | Comma separated list of assets. Can either be a selector to an `<img>` or `<video>` defined in assets, or an inline URL. | []
 srcspath | For use with inline assets, saves you having to write the full image path each time (see above for example) | ''
 src0 | Name of asset. Can either be a selector to an `<img>` or `<video>` defined in assets, or an inline URL. As an alternative to `srcs` you can assign assets directly to specific sides. See below diagram of where numbered sides will end up on your shape.  *`src0` could be used on any shape* | ''
-src1 | Name of asset. Can either be a selector to an `<img>` or `<video>` defined in assets, or an inline URL. *`src1` can currently be set on cubes and cylinders* | ''
-src2 | Name of asset. Can either be a selector to an `<img>` or `<video>` defined in assets, or an inline URL. *`src2` can currently be set on cubes and cylinders* | ''
-src3 | Name of asset. Can either be a selector to an `<img>` or `<video>` defined in assets, or an inline URL. *`src3` can currently be set on cubes* | ''
-src4 | Name of asset. Can either be a selector to an `<img>` or `<video>` defined in assets, or an inline URL. *`src4` can currently be set on cubes* | ''
-src5 |  Name of asset. Can either be a selector to an `<img>` or `<video>` defined in assets, or an inline URL. *`src5` can currently be set on cubes.* | ''
+src1 | Name of asset. Can either be a selector to an `<img>` or `<video>` defined in assets, or an inline URL. *`src1` can currently be set on `cubes` and `cylinders`* | ''
+src2 | Name of asset. Can either be a selector to an `<img>` or `<video>` defined in assets, or an inline URL. *`src2` can currently be set on `cubes` and `cylinders`* | ''
+src3 | Name of asset. Can either be a selector to an `<img>` or `<video>` defined in assets, or an inline URL. *`src3` can currently be set on `cubes`* | ''
+src4 | Name of asset. Can either be a selector to an `<img>` or `<video>` defined in assets, or an inline URL. *`src4` can currently be set on `cubes`* | ''
+src5 |  Name of asset. Can either be a selector to an `<img>` or `<video>` defined in assets, or an inline URL. *`src5` can currently be set on `cubes`* | ''
 
   
 # Notes
