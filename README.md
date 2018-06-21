@@ -8,7 +8,7 @@ The multisrc component integrates with all existing components allowing you to d
 
 # Basics
 
-As with the standard `src` attribute you can use `multisrc` with images/videos that have been preloaded in the `assets` tag (recommended for all the reasons described [here](https://aframe.io/docs/0.8.0/core/asset-management-system.html#sidebar))
+As with the standard `src` attribute you can use `multisrc` with images/videos that have been preloaded in the `assets` tag (recommended for all the reasons described [here](https://aframe.io/docs/0.8.0/core/asset-management-system.html#sidebar)). There are a few different ways to assign your textures with `multisrc`. Please see below
 
 ```html
   <head>
@@ -17,6 +17,7 @@ As with the standard `src` attribute you can use `multisrc` with images/videos t
   </head>
   <body>
     <a-scene>
+
       <a-assets>
         <img id="right" src="path/to/rightimage.png">
         <img id="left" src="path/to/leftimage.png">
@@ -25,6 +26,9 @@ As with the standard `src` attribute you can use `multisrc` with images/videos t
         <img id="front" src="path/to/frontimage.png">
         <img id="back" src="path/to/backimage.png">
       </a-assets>
+      
+      <!-- you can assign the images as ids from assets -->
+
       <a-box 
         position="0 1.5 -2" 
         multisrc="srcs:#right,#left,#top,#bottom,#front,#back"
@@ -32,30 +36,29 @@ As with the standard `src` attribute you can use `multisrc` with images/videos t
         opacity="0.5"
         shadow>
       </a-box>
-    </a-scene>
-  </body>
-  ```
-  Or you can add the images/videos inline
-  
-  ```html
-  <a-box 
+      
+      <!-- OR add the images/videos inline -->
+      
+       <a-box 
     position="0 1.5 -2" 
     multisrc="srcs:path/to/rightimage.png,path/to/leftimage.png,path/to/topimage.png,path/to/bottomimage.png,path/to/frontimage.png,path/to/backimage.png"
     color="blue"
     opacity="0.5"
     shadow>
   </a-box>
-  ```
-When defining assets inline you can avoid rewriting lengthy paths (if all your assets are in the same folder) by using the `srcspath` attribute and then simply listing the image/video names like so;
-  
-  ```html
-  <a-box 
+      
+  <!-- OR When defining assets inline you can avoid rewriting lengthy paths (if all your assets are in the same folder) by using the `srcspath` attribute and then simply listing the image/video names like so -->
+      
+   <a-box 
     position="0 1.5 -2" 
     multisrc="srcspath:path/to/;srcs:rightimage.png,leftimage.png,topimage.png,bottomimage.png,frontimage.png,backimage.png"
     color="blue"
     opacity="0.5"
     shadow>
   </a-box>
+           
+    </a-scene>
+  </body>
   ```
 Examples here are shown using images but as with the standard `src` attribute we can also use videos as a texture. The logic for playback on video textures (and how it differs between those defined inline or within assets) on `multisrc` is the same as that for video textures on standard `src` - see [here](https://aframe.io/docs/0.8.0/components/material.html#video-textures) for details. Basically, preloading is always the best way to do it.
     
