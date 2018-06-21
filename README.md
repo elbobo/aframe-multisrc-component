@@ -79,7 +79,7 @@ src5 |  Name of asset. Can either be a selector to an `<img>` or `<video>` defin
 
 The `srcs` attribute assumes the following order of your textures - **positive-x**, **negative-x**, **positive-y**, **negative-y**, **positive-z**, **negative-z** so in the case of a cube, it will place your first asset on the positive-x side (right), the second on the negative-x side (left) and so on. See diagram below which hopefully makes this clearer.
 
-![Multisrc order of images eplainer](https://github.com/elbobo/aframe-multisrc-component/blob/master/cubediagram.png?raw=true)
+![Multisrc order of images eplainer](https://github.com/elbobo/aframe-multisrc-component/blob/master/cubediagramv2.png?raw=true)
 
 # Usage
 
