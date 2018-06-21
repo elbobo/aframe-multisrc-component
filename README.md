@@ -50,7 +50,7 @@ As with the standard `src` attribute you can use `multisrc` with images/videos t
         shadow>
       </a-box>
       
-  <!-- OR When defining assets inline you can avoid rewriting lengthy paths (if all your assets are in the same folder) using `srcspath` 
+  <!-- OR When defining assets inline, avoid rewriting lengthy paths (if assets in the same folder) using `srcspath` -->
   <!-- Use the `srcspath` attribute and then simply list the image/video names like so -->
       
       <a-box 
@@ -118,7 +118,7 @@ The `src0`, `src1`, etc. attributes follow the same order. See diagram below whi
 
 # Usage
 
-Install and use directly with the link in the below example
+Install and use directly with the link in the below example (below example uses the `src0`, `src1` etc. approach, see above for alternative `srcs` method. 
 
 ```html
   <head>
@@ -137,7 +137,7 @@ Install and use directly with the link in the below example
       </a-assets>
       <a-box 
         position="0 1.5 -2" 
-        multisrc="srcs:#right,#left,#top,#bottom,#front,#back"
+        multisrc="src0:#right;src1#left;src2:#top;src3:#bottom;src4:#front;src5:#back"
         color="blue"
         opacity="0.5"
         shadow>
