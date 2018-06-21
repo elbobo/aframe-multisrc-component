@@ -1,6 +1,9 @@
 # A-frame multisrc component
 
-An [A-frame](https://aframe.io) component that allows you to add separate image/video textures to different sides of standard a-frame shapes
+An [A-frame](https://aframe.io) component that allows you to add separate image/video textures to different sides of standard a-frame shapes. 
+
+### Update 
+New in version 0.2, want to only have an image on the front and top of your cube? Now you can. Target specific sides with textures declaratively
 
 ![Multisrc component animated demo](https://raw.githubusercontent.com/elbobo/aframe-multisrc-component/master/multisrc_animateddemo.gif)
 
