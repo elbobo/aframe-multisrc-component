@@ -67,15 +67,12 @@ Property | Description | Default
 --- | --- | ---
 srcs | comma separated list of assets. Can either be a selector to an `<img>` or `<video>` defined in assets, or an inline URL. | []
 srcspath | for use with inline assets, saves you having to write the full image path each time (see above for example) | ''
-src0 | As an alternative to `srcs` you can assign assets directly to specific sides. Name of asset. Can either be a selector to an `<img>` or `<video>` defined in assets, or an inline URL. | ''
-src1 | (as above) | ''
-src2 | (as above) | ''
-src3 | (as above) | ''
-src4 | (as above) | ''
-src5 | (as above) | ''
-srcx | etc. currently no shapes with more than 6 sides are working | ''
-
-
+src0 | As an alternative to `srcs` you can assign assets directly to specific sides. See below diagram of where numbered sides will end up on your shape. Name of asset. Can either be a selector to an `<img>` or `<video>` defined in assets, or an inline URL. `src0` could be used on any shape. | ''
+src1 | Name of asset. Can either be a selector to an `<img>` or `<video>` defined in assets, or an inline URL. `src1` can currently be set on cubes and cylinders | ''
+src2 | Name of asset. Can either be a selector to an `<img>` or `<video>` defined in assets, or an inline URL. `src2` can currently be set on cubes and cylinders | ''
+src3 | Name of asset. Can either be a selector to an `<img>` or `<video>` defined in assets, or an inline URL. `src3` can currently be set on cubes. | ''
+src4 | Name of asset. Can either be a selector to an `<img>` or `<video>` defined in assets, or an inline URL. `src4` can currently be set on cubes. | ''
+src5 |  Name of asset. Can either be a selector to an `<img>` or `<video>` defined in assets, or an inline URL. `src5` can currently be set on cubes. | ''
 
   
 # Notes
