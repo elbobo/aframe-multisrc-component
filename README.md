@@ -62,10 +62,19 @@ Examples here are shown using images but as with the standard `src` attribute we
   
 # API
 
+
 Property | Description | Default
 --- | --- | ---
 srcs | comma separated list of assets. Can either be a selector to an `<img>` or `<video>` defined in assets, or an inline URL. | []
 srcspath | for use with inline assets, saves you having to write the full image path each time (see above for example) | ''
+src0 | As an alternative to `srcs` you can assign assets directly to specific sides. Name of asset. Can either be a selector to an `<img>` or `<video>` defined in assets, or an inline URL. | ''
+src1 | (as above) | ''
+src2 | (as above) | ''
+src3 | (as above) | ''
+src4 | (as above) | ''
+src5 | (as above) | ''
+srcx | etc. currently no shapes with more than 6 sides are working | ''
+
 
 
   
