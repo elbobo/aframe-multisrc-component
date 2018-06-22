@@ -47,7 +47,8 @@ As with the standard `src` attribute you can use `multisrc` with images/videos t
       <!-- OR add the images/videos inline -->
       
       <a-box 
-        position="0 1.5 -2" multisrc="srcs:path/to/rightimage.png,path/to/leftimage.png,path/to/topimage.png,path/to/bottomimage.png,path/to/frontimage.png,path/to/backimage.png"
+        position="0 1.5 -2" 
+             multisrc="srcs:path/to/rightimage.png,path/to/leftimage.png,path/to/topimage.png,path/to/bottomimage.png,path/to/frontimage.png,path/to/backimage.png"
         color="blue"
         opacity="0.5"
         shadow>
