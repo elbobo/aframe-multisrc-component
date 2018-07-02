@@ -16,7 +16,7 @@ As with the standard `src` attribute you can use `multisrc` with images/videos t
 ```html
   <head>
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
-    <script src="https://cdn.rawgit.com/elbobo/aframe-multisrc-component/3bd3c304/dist/0.2/aframe-multisrc-component.js"></script>
+    <script src="https://cdn.rawgit.com/elbobo/aframe-multisrc-component/b6d23310/dist/0.3/aframe-multisrc-component.js"></script>
   </head>
   <body>
     <a-scene>
@@ -127,7 +127,7 @@ Install and use directly with the link in the below example (below example uses 
 ```html
   <head>
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
-    <script src="https://cdn.rawgit.com/elbobo/aframe-multisrc-component/3bd3c304/dist/0.2/aframe-multisrc-component.js"></script>
+    <script src="https://cdn.rawgit.com/elbobo/aframe-multisrc-component/b6d23310/dist/0.3/aframe-multisrc-component.js"></script>
   </head>
   <body>
     <a-scene>
